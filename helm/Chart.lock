@@ -1,0 +1,9 @@
+dependencies:
+- name: helm-product
+  repository: oci://ghcr.io/onecx/charts
+  version: 0.0.0
+- name: onecx-iam-kc-svc
+  repository: oci://ghcr.io/onecx/charts
+  version: 0.0.0-rc.2
+digest: sha256:7c0ab6f96c088888efd1d146e8b3bb291f6d80abbf8d6a7974df1449e5004b85
+generated: "2023-12-27T14:02:25.812083538+01:00"
