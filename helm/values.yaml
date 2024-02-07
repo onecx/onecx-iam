@@ -1,6 +1,7 @@
 deployment:
   kc-svc: true 
-
+  kc-client-operator: true
+  
 product:
   info:
     data:
