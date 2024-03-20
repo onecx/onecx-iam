@@ -1,4 +1,6 @@
 deployment:
+  ui: true
+  bff: true
   kc-svc: true
   kc-client-operator: true
 
