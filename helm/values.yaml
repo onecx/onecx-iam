@@ -1,12 +1,12 @@
 deployment:
-  kc-svc: true 
+  kc-svc: true
   kc-client-operator: true
-  
+
 product:
   info:
     data:
-      description: "Onecx IAM service"
+      description: "OneCX IAM"
       imageUrl: ""
       iconName: "id-card"
-      displayName: "Onecx IAM"
-      basePath: "/iam"  
+      displayName: "OneCX IAM"
+      basePath: "/iam"
