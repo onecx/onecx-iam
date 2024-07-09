@@ -1,3 +1,9 @@
 name: onecx-iam
 title: IAM Management
 version: latest
+start_page: onecx-iam:index.adoc
+nav:
+  - modules/onecx-iam/nav.adoc
+  - modules/onecx-iam-kc-svc/nav.adoc
+  - modules/onecx-iam-kc-client-operator/nav-adoc
+  - modules/onecx-iam-bff/nav.adoc
