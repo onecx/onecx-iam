@@ -13,6 +13,6 @@ dependencies:
   version: 0.0.0-rc.28
 - name: onecx-iam-ui
   repository: oci://ghcr.io/onecx/charts
-  version: 0.0.0-rc.19
-digest: sha256:3d5a92ba629b673835343900a5d4866184bf43821d1c676ac6b0d7a3e77d5bb4
-generated: "2024-07-19T09:49:31.065976282Z"
+  version: 0.0.0-rc.20
+digest: sha256:aa553bc86d3c51cba298e9cf0e10843e30abcbc2012b44b2dec714a32afdf438
+generated: "2024-07-29T09:35:24.847488838Z"
