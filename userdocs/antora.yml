@@ -1,0 +1,7 @@
+name: onecx-iam
+title: Identity Access Management
+version: latest
+start_page: general:index.adoc
+nav:
+ - modules/general/nav.adoc
+ - modules/ui/nav.adoc
