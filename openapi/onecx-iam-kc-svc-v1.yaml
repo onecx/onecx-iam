@@ -1,10 +1,10 @@
 ---
 openapi: 3.0.3
 info:
- title: onecx-iam-kc-svc V1
+ title: onecx-iam v1
  version: 1.0.0
 servers:
- - url: "http://onecx-iam-kc-svc:8080"
+ - url: "http://onecx-iam"
 tags:
  - name: AdminRoleController
    description: IAM admin role controller
