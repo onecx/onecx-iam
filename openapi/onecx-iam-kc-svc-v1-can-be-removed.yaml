@@ -1,49 +1,20 @@
 ---
 openapi: 3.0.3
 info:
- title: onecx-iam v1
+ title: onecx-iam-kc-svc V1
  version: 1.0.0
 servers:
- - url: "http://onecx-iam"
+ - url: "http://onecx-iam-kc-svc:8080"
 tags:
- - name: AdminRoleController
-   description: IAM admin role controller
- - name: AdminUserController
+ - name: AdminController
    description: IAM admin controller
 paths:
- /v1/roles/search:
+ /v1/{userId}/roles:
   post:
    security:
     - oauth2: [ ocx-ia:all, ocx-ia:read ]
    tags:
-    - AdminRoleController
-   summary: Search roles by criteria
-   operationId: rolesSearchByCriteria
-   requestBody:
-    required: true
-    content:
-     application/json:
-      schema:
-       $ref: '#/components/schemas/RoleSearchCriteria'
-   responses:
-    200:
-     description: OK
-     content:
-      "application/json":
-       schema:
-        $ref: "#/components/schemas/RolePageResult"
-    400:
-     description: Bad request
-     content:
-      application/json:
-       schema:
-        $ref: '#/components/schemas/ProblemDetailResponse'
- /v1/user/roles/{userId}:
-  get:
-   security:
-    - oauth2: [ ocx-ia:all, ocx-ia:read ]
-   tags:
-    - AdminUserController
+    - AdminController
    summary: Get roles of user by id
    operationId: getUserRoles
    parameters:
@@ -53,6 +24,11 @@ paths:
       description: Keycloak userId
       schema:
        type: string
+   requestBody:
+    content:
+     "application/json":
+      schema:
+       $ref: '#/components/schemas/UserRolesSearchRequest'
    responses:
     200:
      description: OK
@@ -66,23 +42,25 @@ paths:
       application/json:
        schema:
         $ref: '#/components/schemas/ProblemDetailResponse'
- /v1/user/password:
-  put:
+ /v1/validate:
+  post:
    security:
-    - oauth2: [ ocx-ia:write ]
+    - oauth2: [ ocx-ia:read ]
    tags:
-    - AdminUserController
-   summary: user reset password
-   operationId: userResetPassword
+    - AdminController
+   summary: check if issuer is part of this svc
+   operationId: validateIssuer
    requestBody:
     required: true
     content:
-     application/json:
+     "application/json":
       schema:
-       $ref: '#/components/schemas/UserResetPasswordRequest'
+       $ref: '#/components/schemas/ValidateIssuerRequest'
    responses:
-    204:
-     description: reset password succeeded
+    200:
+     description: OK
+    404:
+     description: issuer not found
     400:
      description: Bad request
      content:
@@ -100,46 +78,20 @@ components:
       ocx-ia:read: Grants read access
       ocx-ia:write: Grants write access
  schemas:
+  ValidateIssuerRequest:
+   type: object
+   properties:
+    issuer:
+     type: string
+  UserRolesSearchRequest:
+   type: object
+   properties:
+    issuer:
+     type: string
   UserRolesResponse:
    type: object
    properties:
     roles:
-     type: array
-     items:
-      $ref: '#/components/schemas/Role'
-  RoleSearchCriteria:
-   type: object
-   properties:
-    name:
-     type: string
-    pageNumber:
-     format: int32
-     description: The number of page.
-     default: 0
-     type: integer
-    pageSize:
-     format: int32
-     description: The size of page
-     default: 100
-     maximum: 1000
-     type: integer
-  RolePageResult:
-   type: object
-   properties:
-    totalElements:
-     format: int64
-     description: The total elements in the resource.
-     type: integer
-    number:
-     format: int32
-     type: integer
-    size:
-     format: int32
-     type: integer
-    totalPages:
-     format: int64
-     type: integer
-    stream:
      type: array
      items:
       $ref: '#/components/schemas/Role'
@@ -150,15 +102,6 @@ components:
      type: string
     description:
      type: string
-  UserResetPasswordRequest:
-   type: object
-   required:
-    - password
-   properties:
-    password:
-     type: string
-     format: password
-     minLength: 1
   ProblemDetailResponse:
    type: object
    properties:
