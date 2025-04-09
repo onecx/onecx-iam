@@ -6,7 +6,7 @@ info:
 servers:
  - url: "http://onecx-iam-api-bff:8080"
 tags:
- - name: AdminController
+ - name: AdminApiController
    description: IAM admin controller
 paths:
  /admin/{userId}/roles:
@@ -16,7 +16,7 @@ paths:
      role:
       - ext-api-req
    tags:
-    - AdminController
+    - AdminApiController
    summary: Get roles of user by id
    operationId: getUserRoles
    parameters:
