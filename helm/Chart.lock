@@ -7,12 +7,12 @@ dependencies:
   version: 1.4.0
 - name: onecx-iam-kc-client-operator
   repository: oci://ghcr.io/onecx/charts
-  version: 1.4.0
+  version: 1.5.0-rc.1
 - name: onecx-iam-bff
   repository: oci://ghcr.io/onecx/charts
   version: 1.4.0
 - name: onecx-iam-ui
   repository: oci://ghcr.io/onecx/charts
   version: 1.5.0-rc.1
-digest: sha256:c526f4e465bac5cdd9bf7bbd30105c083871ed1e580ba1875b8e25f1f6bbb62c
-generated: "2025-05-20T08:17:43.052108684Z"
+digest: sha256:cb51be7f09ecc1a3abb31a2017d1ce50b6df6eef816940d3dc5c4c75db8f8eed
+generated: "2025-05-23T09:54:04.485744429Z"
