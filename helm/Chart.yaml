@@ -12,6 +12,11 @@ dependencies:
   repository: oci://ghcr.io/onecx/charts
   condition: "deployment.kc-svc"
   alias: "kc-svc"
+- name: onecx-iam-svc
+  version: "*-0"
+  repository: oci://ghcr.io/onecx/charts
+  condition: "deployment.svc"
+  alias: "svc"
 - name: onecx-iam-kc-client-operator
   version: "*-0"
   repository: oci://ghcr.io/onecx/charts
