@@ -1,6 +1,7 @@
 deployment:
   ui: true
   bff: true
+  svc: true
   kc-svc: true
   kc-client-operator: true
 
@@ -11,4 +12,6 @@ product:
       imageUrl: ""
       iconName: "id-card"
       displayName: "OneCX IAM"
-      basePath: "/iam"
+      basePath: /iam
+      provider: "OneCX Team"
+      classifications: [ "Administration" ]
