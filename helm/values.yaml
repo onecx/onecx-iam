@@ -2,7 +2,6 @@ deployment:
   ui: true
   bff: true
   svc: true
-  kc-svc: true
   kc-client-operator: true
 
 product:
