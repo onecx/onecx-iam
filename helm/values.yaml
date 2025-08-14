@@ -3,7 +3,7 @@ deployment:
   bff: true
   svc: true
   kc-client-operator: true
-
+ 
 product:
   info:
     data:
@@ -14,3 +14,4 @@ product:
       basePath: /iam
       provider: "OneCX Team"
       classifications: [ "Administration" ]
+
