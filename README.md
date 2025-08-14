@@ -1,2 +1,2 @@
 # onecx-iam
-OneCx iam
+OneCX IAM
