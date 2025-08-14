@@ -7,11 +7,6 @@ dependencies:
   version: ^0
   repository: oci://ghcr.io/onecx/charts
   alias: product
-- name: onecx-iam-kc-svc
-  version: "*-0"
-  repository: oci://ghcr.io/onecx/charts
-  condition: "deployment.kc-svc"
-  alias: "kc-svc"
 - name: onecx-iam-svc
   version: "*-0"
   repository: oci://ghcr.io/onecx/charts
