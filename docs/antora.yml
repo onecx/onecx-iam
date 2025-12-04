@@ -1,10 +1,2 @@
-name: onecx-iam
-title: Identity Access Management
+name: documentation
 version: latest
-start_page: general:index.adoc
-nav:
-  - modules/general/nav.adoc
-  - modules/onecx-iam-kc-svc/nav.adoc
-  - modules/onecx-iam-kc-client-operator/nav.adoc
-  - modules/onecx-iam-bff/nav.adoc
-  - modules/onecx-iam-ui/nav.adoc
