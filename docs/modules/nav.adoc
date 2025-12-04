@@ -1,1 +1,1 @@
-* xref:documentation:onecx-iam:general:index.adoc[IAM]
+* xref:documentation:onecx-iam:index.adoc[IAM]
