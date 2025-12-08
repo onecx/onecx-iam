@@ -1,10 +1,4 @@
-name: onecx-iam
-title: Identity Access Management
+# Define the same name space as used for the parent documentation project https://github.com/onecx/docs
+name: documentation
 version: latest
-start_page: general:index.adoc
-nav:
-  - modules/general/nav.adoc
-  - modules/onecx-iam-kc-svc/nav.adoc
-  - modules/onecx-iam-kc-client-operator/nav.adoc
-  - modules/onecx-iam-bff/nav.adoc
-  - modules/onecx-iam-ui/nav.adoc
+# Do not add any further properties here. This will affect the parent documentation project.
