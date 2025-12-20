@@ -4,6 +4,6 @@ include::documentation:onecx-iam-ui:partial$nav.adoc[]
 +
 include::documentation:onecx-iam-bff:partial$nav.adoc[]
 +
-include::documentation:onecx-iam-kc-svc:partial$nav.adoc[]
+include::documentation:onecx-iam-svc:partial$nav.adoc[]
 +
 include::documentation:onecx-iam-kc-client-operator:partial$nav.adoc[]
