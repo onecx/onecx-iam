@@ -1,0 +1,101 @@
+---
+openapi: 3.0.3
+info:
+ title: onecx-iam-kc-svc V1
+ version: 1.0.0
+servers:
+ - url: "http://onecx-iam-api-bff:8080"
+tags:
+ - name: AdminApiController
+   description: IAM admin controller
+paths:
+ /admin/{userId}/roles:
+  post:
+   x-onecx:
+    permissions:
+     role:
+      - ext-api-req
+   tags:
+    - AdminApiController
+   summary: Get roles of user by id
+   operationId: getUserRoles
+   parameters:
+    - name: userId
+      in: path
+      required: true
+      description: Provider userId
+      schema:
+       type: string
+   requestBody:
+    content:
+     "application/json":
+      schema:
+       $ref: '#/components/schemas/UserRolesSearchRequest'
+   responses:
+    200:
+     description: OK
+     content:
+      "application/json":
+       schema:
+        $ref: '#/components/schemas/UserRolesResponse'
+    400:
+     description: Bad request
+     content:
+      application/json:
+       schema:
+        $ref: '#/components/schemas/ProblemDetailResponse'
+components:
+ schemas:
+  ValidateIssuerRequest:
+   type: object
+   properties:
+    issuer:
+     type: string
+  UserRolesSearchRequest:
+   type: object
+   properties:
+    issuer:
+     type: string
+  UserRolesResponse:
+   type: object
+   properties:
+    roles:
+     type: array
+     items:
+      $ref: '#/components/schemas/Role'
+  Role:
+   type: object
+   properties:
+    name:
+     type: string
+    description:
+     type: string
+  ProblemDetailResponse:
+   type: object
+   properties:
+    errorCode:
+     type: string
+    detail:
+     type: string
+    params:
+     type: array
+     items:
+      $ref: '#/components/schemas/ProblemDetailParam'
+    invalidParams:
+     type: array
+     items:
+      $ref: '#/components/schemas/ProblemDetailInvalidParam'
+  ProblemDetailParam:
+   type: object
+   properties:
+    key:
+     type: string
+    value:
+     type: string
+  ProblemDetailInvalidParam:
+   type: object
+   properties:
+    name:
+     type: string
+    message:
+     type: string
