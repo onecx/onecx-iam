@@ -10,9 +10,9 @@ dependencies:
   version: 1.10.0-rc.1
 - name: onecx-iam-bff
   repository: oci://ghcr.io/onecx/charts
-  version: 1.10.0-rc.1
+  version: 1.10.0-rc.2
 - name: onecx-iam-ui
   repository: oci://ghcr.io/onecx/charts
   version: 1.7.0
-digest: sha256:9bc29356a164abe305815ef72a130d0d80dbe6133f062bab5238658811d2f1cf
-generated: "2026-05-19T12:50:28.2350903Z"
+digest: sha256:99b99868bb57e198354136daa13e2c925ebe59e9a48ee096466cb4c98803e7f1
+generated: "2026-05-20T01:28:59.806608976Z"
