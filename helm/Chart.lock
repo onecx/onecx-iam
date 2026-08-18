@@ -4,7 +4,7 @@ dependencies:
   version: 0.4.0
 - name: onecx-iam-svc
   repository: oci://ghcr.io/onecx/charts
-  version: 1.5.0-rc.13
+  version: 1.5.0-rc.14
 - name: onecx-iam-kc-client-operator
   repository: oci://ghcr.io/onecx/charts
   version: 1.10.0-rc.14
@@ -14,5 +14,5 @@ dependencies:
 - name: onecx-iam-ui
   repository: oci://ghcr.io/onecx/charts
   version: 1.8.0-rc.20
-digest: sha256:b3c433786b3d9b20a0f31ad3d7b105a18bcb17c27fad6ed650081c566b9ab9be
-generated: "2026-08-18T08:44:27.667534985Z"
+digest: sha256:a345f6a56f2d1bb04850655121f440759438dc6db3aa97673f826f66116a4ebd
+generated: "2026-08-18T11:13:04.986022027Z"
